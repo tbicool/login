@@ -117,6 +117,9 @@
 	</div>
 	<!-- END TOP NAVIGATION BAR -->
 </div>
+<!-- END HEADER -->
+<div class="clearfix">
+</div>
 <!-- BEGIN CONTAINER -->
 <div class="page-container">
 	<!-- BEGIN SIDEBAR -->

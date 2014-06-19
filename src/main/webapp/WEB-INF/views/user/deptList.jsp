@@ -94,76 +94,92 @@ function toSave(){
 	<!-- BEGIN CONTENT -->
 	<div class="page-content-wrapper">
 		<div class="page-content" style="margin-left: auto;">
-			<!-- BEGIN PAGE HEADER-->
-			
-			<!-- END PAGE HEADER-->
-			<div class="row-fluid">
-				<div class="span12">
-					<form name="listForm" id="listForm">
-						<table class="table table-bordered table-striped table_vam dataTable">
-							<tbody>
-								<tr>
-									<th>角色名称</th>
-									<td>
-										<input type="text" name="deptName"  class="form-control" style="width: 300px"/>
-									 </td>
-								</tr>
-								<tr>
-									<td colspan="4">								
-										<div>
-											<div align="center">
-												<button class="btn blue dropdown-toggle" type="button" onclick="oTable.fnDraw();">查询</button>&nbsp;&nbsp;&nbsp;&nbsp;
-												<button class="btn blue dropdown-toggle" type="reset">重置</button>
-											</div>
-											<div>
-												<div class="pull-right">
-												<shiro:hasPermission name="dept:edit">
-													<button class="btn default"  type="button" onclick="toSave()">新增角色</button>
-												</shiro:hasPermission>
-												</div>
-											</div>
-										</div>
-									</td>
-								</tr>
-							</tbody>
-						</table>
-					</form>
-				</div>
-			</div>
-			<!-- BEGIN PAGE CONTENT-->
 			<div class="row">
 				<div class="col-md-12">
-					<!-- BEGIN EXAMPLE TABLE PORTLET-->
-					<div class="portlet box blue">
-						<div class="portlet-title">
-							<div class="caption">
-								<i class="fa fa-globe"></i>列表内容
-							</div>
-							<div class="actions">
-								<div class="btn-group">
-									<a class="btn default" href="#" data-toggle="dropdown">
-									导出
-									</a>
+					<div class="tabbable tabbable-custom boxless">
+						<div class="tab-content">
+							<div class="tab-pane active" id="tab_0">
+								<div class="portlet box blue">
+									<div class="portlet-title">
+										<div class="caption">
+											<i class="fa fa-reorder"></i>角色查询条件
+										</div>
+									</div>
+									<div class="portlet-body form">
+										<!-- BEGIN FORM-->
+										<form name="listForm" id="listForm" action="" method="post">
+											<div class="form-body">
+												<h3 class="form-section"></h3>
+												<div class="row">
+													<div class="col-md-6">
+														<div class="form-group">
+															<label class="control-label col-md-3">角色名称</label>
+															<div class="col-md-9">
+																<input type="text" class="form-control" name="deptName">
+															</div>
+														</div>
+													</div>
+													<!--/span-->
+												</div>
+												
+											</div>
+											<div class="form-actions fluid">
+												<div class="row">
+													<div class="col-md-6">
+														<div class="col-md-offset-3 col-md-9">
+															<button class="btn green" type="button" onclick="oTable.fnDraw();">查询</button>
+															<button class="btn default" type="reset">重置</button>
+														</div>
+													</div>
+													<div class="col-md-6" align="right">
+														<shiro:hasPermission name="dept:edit">
+															<button class="btn blue"  type="button" onclick="toSave()">新增角色</button>
+														</shiro:hasPermission>
+													</div>
+												</div>
+											</div>
+										</form>
+										<!-- END FORM-->
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-12">
+										<!-- BEGIN EXAMPLE TABLE PORTLET-->
+										<div class="portlet box blue">
+											<div class="portlet-title">
+												<div class="caption">
+													<i class="fa fa-globe"></i>列表内容
+												</div>
+												<div class="actions">
+													<div class="btn-group">
+														<a class="btn default" href="#" data-toggle="dropdown">
+														导出
+														</a>
+													</div>
+												</div>
+											</div>
+											<div class="portlet-body">
+												<table class="table table-striped table-bordered table-hover table-full-width"  id="listTable">
+												<thead>
+													<tr>
+														<th>部门ID</th>
+														<th>部门名称</th>
+														<th>操作</th>
+													</tr>
+												</thead>
+												<tbody>
+												
+												</tbody>
+												</table>
+											</div>
+										</div>
+									<!-- END EXAMPLE TABLE PORTLET-->
 								</div>
 							</div>
 						</div>
-						<div class="portlet-body">
-							<table class="table table-striped table-bordered table-hover table-full-width" id="listTable">
-							<thead>
-							<tr>
-								<th>部门ID</th>
-								<th>部门名称</th>
-								<th>操作</th>
-							</tr>
-							</thead>
-							
-							</table>
-						</div>
 					</div>
-					<!-- END EXAMPLE TABLE PORTLET-->
 				</div>
 			</div>
-			<!-- END PAGE CONTENT-->
 		</div>
 	</div>
 	<!-- END CONTENT -->

@@ -79,6 +79,8 @@
 <script src="${ctx}/static/assets/plugins/fullcalendar/fullcalendar/fullcalendar.min.js" type="text/javascript"></script>
 <script src="${ctx}/static/assets/plugins/jquery-easy-pie-chart/jquery.easy-pie-chart.js" type="text/javascript"></script>
 <script src="${ctx}/static/assets/plugins/jquery.sparkline.min.js" type="text/javascript"></script>
+
+<script language="javascript" type="text/javascript" src="${ctx}/static/My97DatePicker/WdatePicker.js"></script>
 <!-- END PAGE LEVEL PLUGINS -->
 <!-- BEGIN PAGE LEVEL SCRIPTS -->
 <script src="${ctx}/static/assets/scripts/app.js" type="text/javascript"></script>
